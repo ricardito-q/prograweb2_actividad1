@@ -1,0 +1,23 @@
+<h1 class="animated fadeIn">{{ producto.nombre }}</h1>
+<hr>
+<div class="row animated fadeIn fast">
+    <div class="col-md-4">
+        <img [src]="producto.img" class="img-fluid" [alt]="producto.nombre">
+        <br><br>
+        <!-- <a [routerLink]="['/productos']" class="btn btn-outline-danger btn-block">
+            Regresar
+        </a> -->
+        <a href="/productos" class="btn btn-outline-danger btn-block">Regresar</a>
+    </div>
+    <div class="col-md-8">
+        <h3>{{ producto.nombre }}</h3>
+        <hr>
+        <p>
+            Precio: {{ producto.precio }}
+        </p>
+        <img *ngIf="producto.casa == 'Marvel'" class="img-logo"
+             src="assets/img/marvel-logo.png" alt="DC">
+        <img *ngIf="producto.casa == 'DC'" class="img-logo"
+             src="assets/img/dc-logo.jpg" alt="Marvel">
+    </div>
+</div>  

@@ -1,0 +1,22 @@
+<table class="table mt-3 animated fadeIn faster animated fadeIn faster">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">producto</th>
+      <th scope="col">Categoria</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Fecha Compra</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let producto of productos; let i = index">
+      <td>{{ producto.idproducto }}</td>
+      <td>{{ producto.nombre }}</td>
+      <td>{{ producto.categoria }}</td>
+      <td>{{ producto.preciounitario | currency }}</td>
+      <td>{{ producto.fechacompra | date: 'MMMM-dd' }}</td>
+      
+    </tr>
+    
+  </tbody>
+</table>

@@ -1,0 +1,8 @@
+<div *ngFor="let producto of productos; let i = index" class="card" style="width: 18rem;">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{ producto.nombre }}</h5>
+      <p class="card-text">Precio: {{ producto.preciounitario | currency }}</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>

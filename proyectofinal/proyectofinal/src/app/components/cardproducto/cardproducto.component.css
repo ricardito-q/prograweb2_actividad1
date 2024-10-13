@@ -1,0 +1,21 @@
+.boton-regresar {
+    display: block; /* Hace que el botón sea de ancho completo */
+    width: 100%; /* Ancho completo */
+    text-align: center; /* Texto centrado */
+    margin-top: 20px; /* Margen superior */
+    margin-bottom: 20px; /* Margen inferior */
+    padding: 10px 0; /* Padding vertical */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    background-color: #dc3545; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: 2px solid #dc3545; /* Borde */
+    border-radius: 5px; /* Borde redondeado */
+    text-decoration: none; /* Sin subrayado */
+  }
+  
+  .boton-regresar:hover {
+    background-color: #c82333; /* Color de fondo al pasar el ratón */
+    border-color: #c82333; /* Color del borde al pasar el ratón */
+    color: white; /* Color del texto al pasar el ratón */
+  }
+  

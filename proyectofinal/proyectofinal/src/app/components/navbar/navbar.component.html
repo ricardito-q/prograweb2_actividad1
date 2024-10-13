@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark bg-faded sticky-top">
+  <button
+    class="navbar-toggler navbar-toggler-right"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <style>
+    .navbar-logo {
+      width: 150px; /* Ancho s */
+      height: 50px; /*  altura */
+    }
+  </style>
+  <a class="navbar-brand" href="#">
+    <img
+      src="https://cdn.pccomponentes.com/img/logos/logo-pccomponentes.svg"
+      class="navbar-logo"
+      alt=""
+    />
+  </a>
+  <p></p>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [href]="['inicio']">Inicio</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [href]="['productos']">Productos</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [href]="['contacto']">Contacto</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [href]="['acerca-de-nosotros']"
+          >Acerca de Nosotros</a
+        >
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input
+        class="form-control mr-sm-2"
+        type="text"
+        placeholder="Buscar producto"
+        (keyup.enter)="buscarProducto(buscarTexto.value)"
+        #buscarTexto
+      />
+      <button
+        (click)="buscarProducto(buscarTexto.value)"
+        class="btn btn-outline-primary my-2 my-sm-0"
+        type="button"
+      >
+        Buscar
+      </button>
+    </form>
+  </div>
+</nav>

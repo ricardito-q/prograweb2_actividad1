@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <!-- Formulario -->
+        <h4>Contactos </h4>
+        <hr>
+        <form autocomplete="off" (ngSubmit)="guardar(forma)" #forma="ngForm">
+          <div>
+            <div class="form-group row">
+              <label class="col-2 col-form-label">Nombre</label>
+              <div class="col-8">
+                <input class="form-control" type="text" name="nombre" placeholder="Nombre"
+                       [class.is-invalid]="nombre.invalid && nombre.touched" [(ngModel)]="pacienteModel.nombre" required minlength="5"
+                       #nombre="ngModel">
+                <small *ngIf="nombre.invalid && nombre.touched" class="form-text text-danger">Ingrese 5 letras</small>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-2 col-form-label">Email</label>
+              <div class="col-8">
+                <input class="form-control" type="email" name="email" placeholder="Correo electrónico"
+                       [class.is-invalid]="email.invalid && email.touched" [(ngModel)]="pacienteModel.email" required
+                       #email="ngModel">
+                <small *ngIf="email.invalid && email.touched" class="form-text text-danger">El correo es obligatorio</small>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-2 col-form-label">Teléfono</label>
+              <div class="col-8">
+                <input class="form-control" type="text" name="telefono" placeholder="Teléfono"
+                       [class.is-invalid]="telefono.invalid && telefono.touched" [(ngModel)]="pacienteModel.telefono" required
+                       #telefono="ngModel">
+                <small *ngIf="telefono.invalid && telefono.touched" class="form-text text-danger">El teléfono es obligatorio</small>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-2 col-form-label">Asunto</label>
+              <div class="col-8">
+                <input class="form-control" type="text" name="asunto" placeholder="Asunto"
+                       [class.is-invalid]="asunto.invalid && asunto.touched" [(ngModel)]="pacienteModel.asunto" required minlength="5"
+                       #asunto="ngModel">
+                <small *ngIf="asunto.invalid && asunto.touched" class="form-text text-danger">Ingrese 5 letras</small>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-2 col-form-label">Fecha de Registro</label>
+              <div class="col-8">
+                <input class="form-control" type="date" name="fecharegistro" placeholder="Fecha de Registro"
+                       [class.is-invalid]="fecharegistro.invalid && fecharegistro.touched" [(ngModel)]="pacienteModel.fecharegistro"
+                       required #fecharegistro="ngModel">
+                <small *ngIf="fecharegistro.invalid && fecharegistro.touched" class="form-text text-danger">La fecha es obligatoria</small>
+              </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">Estado de Registro</label>
+                <div class="col-8">
+                  <input type="checkbox" name="estadoregistro" [(ngModel)]="pacienteModel.estadoregistro" #estadoregistro="ngModel"> Activo
+                </div>
+              </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-2 col-form-label">&nbsp;</label>
+            <div class="input-group col-md-8">
+              <button type="submit" class="btn btn-outline-primary btn-block">Guardar</button>
+              <button type="button" class="btn btn-success btn-block" (click)="abrirWhatsApp()">Contactar por WhatsApp</button>
+            </div>
+          </div>
+        </form>
+       
+      </div>
+      <div class="col-md-6">
+        <!-- Ubicación -->
+        <h4>Ubicación</h4>
+        <div id="map" style="height: 400px; width: 100%;"></div>
+      </div>
+    </div>
+  </div>
+  

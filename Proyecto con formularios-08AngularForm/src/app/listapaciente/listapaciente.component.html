@@ -1,0 +1,22 @@
+<table class="table mt-3 animated fadeIn faster animated fadeIn faster">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">nombre</th>
+        <th scope="col">apellido</th>
+        <th scope="col">Genero</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let paciente of pacientes; let i = index">
+        <td>{{ paciente.idpaciente }}</td>
+        <td>{{ paciente.nombre }}</td>
+        <td>{{ paciente.apellido }}</td>
+        <td>{{ paciente.genero }}</td>
+       
+      </tr>
+      
+    </tbody>
+  </table>
+  

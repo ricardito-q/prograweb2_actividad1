@@ -1,0 +1,10 @@
+<h1>Lista de productos</h1>
+<hr>
+<div class="row row-cols-3 g-3 m-3">
+   <app-cardproducto-tarjeta
+      (productoSeleccionado)="verProducto($event)"
+      [producto]="foo" [index]="i"
+      *ngFor="let foo of productos; let i= index">
+   </app-cardproducto-tarjeta>
+   
+</div>
